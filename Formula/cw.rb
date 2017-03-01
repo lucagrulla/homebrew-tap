@@ -1,4 +1,4 @@
-class Awless < Formula
+class Cw < Formula
   version = "0.0.1"
   
   desc "Cloudwatch CLI Tool"
