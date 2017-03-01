@@ -23,7 +23,7 @@ class Cw < Formula
 
     cd dir do
       # Make binary
-      system "go", "build", "-o", "cw", "-tag",version,"-brew","-arch","#{arch}", "-os","darwin"
+      system "go", "build", "-o", "cw"
       bin.install "cw"
 
       # Install bash completion
