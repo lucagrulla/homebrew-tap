@@ -1,6 +1,8 @@
 # homebrew-cw
 Brewfile for cw
 
+[http://www.lucagrulla.com/cw/](http://www.lucagrulla.com/cw/)
+
 ## Updating brew formula and bottle
 1. Uninstall brew cw
     brew uninstall cw
