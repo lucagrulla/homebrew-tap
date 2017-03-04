@@ -1,7 +1,7 @@
 class Cw < Formula
-  version = "0.1.1"
+  version = "0.1.2"
   
-  desc "Cloudwatch CLI Tool"
+  desc "CloudWatch CLI Tool"
   homepage "https://github.com/lucagrulla/cw"
   url "https://github.com/lucagrulla/cw.git",
         :tag => version
@@ -11,8 +11,7 @@ class Cw < Formula
   
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "d429bb0727a8b3d436754e68d69e727c4e116b5d2c8c61aa8fee6c7ce4a27e2d" => :sierra
+    sha256 "9e420558156992c9b406c868587049103bd9c39333c3e718772dbc0142acbfa2" => :sierra
   end
 
   def install
@@ -49,6 +48,6 @@ class Cw < Formula
 
   test do
     run_output = shell_output("#{bin}/cw --help 2>&1")
-    assert_match "cq is a tool to interact with your CloudWatch log stream from CLI", run_output
+    assert_match "cw is a tool to interact with your CloudWatch log stream from CLI", run_output
   end
 end

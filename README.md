@@ -2,8 +2,8 @@
 Brewfile for cw
 
 ## Updating brew formula and bottle
-1. Uninstall brew awless
-    brew uninstall awless
+1. Uninstall brew cw
+    brew uninstall cw
     
 2. Update  with new version informations
 3. Build bottle
