@@ -6,10 +6,11 @@ Brewfile for cw
     brew uninstall cw
     
 2. Update  with new version informations
-3. Build bottle
+3. Push recipe
+4. Build bottle
   * brew install --build-bottle cw
   * brew bottle cw
     
-4. Update the formula with the output of `brew bottle...` 
-5. Push the formula
-6. Add the formula to a new release on github releases of homebrew-cw
+5. Update the formula with the output of `brew bottle...` 
+6. Push the formula
+7. Add the formula .tar.gz to a new release on github releases of homebrew-cw
