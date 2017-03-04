@@ -1,5 +1,5 @@
 class Cw < Formula
-  version = "0.1.2"
+  version = "0.1.3"
   
   desc "CloudWatch CLI Tool"
   homepage "https://github.com/lucagrulla/cw"
@@ -48,6 +48,6 @@ class Cw < Formula
 
   test do
     run_output = shell_output("#{bin}/cw --help 2>&1")
-    assert_match "cw is a tool to interact with your CloudWatch log stream from CLI", run_output
+    assert_match "cw is a CLI tool to interact with your CloudWatch log streams", run_output
   end
 end
