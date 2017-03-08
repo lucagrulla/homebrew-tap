@@ -7,7 +7,7 @@ Brewfile for cw
 1. Uninstall brew cw
     brew uninstall cw
     
-2. Update  with new version informations
+2. Update with new version informations
 3. Push recipe
 4. Build bottle
   * brew install --build-bottle cw
