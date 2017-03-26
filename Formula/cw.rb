@@ -10,9 +10,9 @@ class Cw < Formula
   depends_on "go" => :build
   
   bottle do
-    root_url "https://github.com/lucagrulla/homebrew-cw/releases/download/#{version}"
     cellar :any_skip_relocation
-    sha256 "b9d8ea192d479c0dba39a2ad19c7b3bf04c024ac2d22875a2e4212c34274ee4d" => :sierra
+    rebuild 1
+    sha256 "c32caff0b4dac629870dfc007e56e1ec197538b1aefb3d190da61f8338839f5c" => :sierra
   end
 
   def install
