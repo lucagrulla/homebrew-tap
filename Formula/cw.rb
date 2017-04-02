@@ -1,5 +1,5 @@
 class Cw < Formula
-  version = "0.2.2"
+  version = "0.2.3"
   
   desc "CloudWatch CLI Tool"
   homepage "https://github.com/lucagrulla/cw"
