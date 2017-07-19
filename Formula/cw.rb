@@ -1,7 +1,7 @@
 class Cw < Formula
-  version = "0.2.3"
+  version = "1.0.0"
   
-  desc "CloudWatch CLI Tool"
+  desc "CloudWatch Log CLI Tool"
   homepage "https://github.com/lucagrulla/cw"
   url "https://github.com/lucagrulla/cw.git",
         :tag => version
