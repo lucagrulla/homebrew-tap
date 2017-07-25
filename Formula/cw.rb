@@ -1,7 +1,7 @@
 class Cw < Formula
-  version = "1.1.0"
+  version = "1.2.0"
   
-  desc "CloudWatch Log CLI Tool"
+  desc "CloudWatch Logs CLI Tool"
   homepage "https://github.com/lucagrulla/cw"
   url "https://github.com/lucagrulla/cw.git",
         :tag => version
@@ -27,7 +27,7 @@ class Cw < Formula
       bin.install "cw"
 
       # Install bash completion
-      output = Utils.popen_read("#{bin}/cw completion bash")
+      output = Utils.popen_read("#{bin}/cw --completion-script-bash")
       (bash_completion/"cw").write output
       
       # Install zsh completion
