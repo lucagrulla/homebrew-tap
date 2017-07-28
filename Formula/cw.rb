@@ -1,5 +1,5 @@
 class Cw < Formula
-  version = "1.2.0"
+  version = "1.2.1"
   
   desc "CloudWatch Logs CLI Tool"
   homepage "https://github.com/lucagrulla/cw"
@@ -12,6 +12,7 @@ class Cw < Formula
   bottle do
     root_url "https://github.com/lucagrulla/homebrew-cw/releases/download/#{version}"
     cellar :any_skip_relocation
+    rebuild 1
     sha256 "630c3a84a6e28219d0a35df2a2e1ad7a8689a54fcb873ab003ae3e6857747538" => :sierra
   end
 
