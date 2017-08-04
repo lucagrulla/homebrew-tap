@@ -43,7 +43,7 @@ class Cw < Formula
         [bash] you need to install `bash-completion` with brew.
         OR
         [zsh], add the following line to your ~/.zshrc:
-          source #{HOMEBREW_PREFIX}/share/zsh/site-functions/_cw
+          source #{HOMEBREW_PREFIX}/share/zsh/site-functions/cw
       EOS
   end
 
