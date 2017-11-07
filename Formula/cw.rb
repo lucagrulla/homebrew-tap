@@ -12,7 +12,7 @@ class Cw < Formula
   bottle do
     root_url "https://github.com/lucagrulla/homebrew-cw/releases/download/#{version}"
     cellar :any_skip_relocation
-    sha256 "8573734408a5c3ee2f11e32e6abdaec29331d4b6c8aa77eceb75ab2ab1c57b8d" => :sierra
+    sha256 "31d078da616d61fc1953929fb1d6edc629085cd98ecb07bd0117e8a116d1005a" => :sierra
   end
 
   def install
