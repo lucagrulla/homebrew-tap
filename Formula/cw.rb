@@ -12,7 +12,8 @@ class Cw < Formula
   bottle do
     root_url "https://github.com/lucagrulla/homebrew-cw/releases/download/#{version}"
     cellar :any_skip_relocation
-    sha256 "d8809b07f27bad50ebcab6f117f8acac3aa8f2f5afb1c2bc7c012a0dd70303e2" => :sierra
+    # sha256 "dfa23ccff3149d0a12e061c1807f83756395ded8d36a542fd766899bc6351b33" => :sierra
+    sha256 "dfa23ccff3149d0a12e061c1807f83756395ded8d36a542fd766899bc6351b33" => :high_sierra
   end
 
   def install
@@ -37,7 +38,7 @@ class Cw < Formula
   end
 
   def caveats
-      <<-EOS.undent
+      <<-EOS
 
       In order to get cw completion,
         [bash] you need to install `bash-completion` with brew.
