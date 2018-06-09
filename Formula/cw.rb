@@ -1,6 +1,6 @@
 class Cw < Formula
-  version = "1.3.3"
-  
+  version = "1.3.4"
+
   desc "CloudWatch Logs CLI"
   homepage "https://github.com/lucagrulla/cw"
   url "https://github.com/lucagrulla/cw.git",
@@ -8,7 +8,7 @@ class Cw < Formula
   head "https://github.com/lucagrulla/cw.git"
 
   depends_on "go" => :build
-  
+
   bottle do
     root_url "https://github.com/lucagrulla/homebrew-cw/releases/download/#{version}"
     cellar :any_skip_relocation
@@ -29,17 +29,17 @@ class Cw < Formula
       # Install bash completion
       output = Utils.popen_read("#{bin}/cw --completion-script-bash")
       (bash_completion/"cw").write output
-      
+
       # Install zsh completion
       output = Utils.popen_read("#{bin}/cw completion zsh")
       (zsh_completion/"cw").write output
     end
   end
-  
+
   def caveats
       <<-EOS.undent
-      
-      In order to get cw completion, 
+
+      In order to get cw completion,
         [bash] you need to install `bash-completion` with brew.
         OR
         [zsh], add the following line to your ~/.zshrc:
