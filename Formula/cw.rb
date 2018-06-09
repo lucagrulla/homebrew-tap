@@ -23,7 +23,6 @@ class Cw < Formula
 
     cd dir do
       # Make binary
-      system "dep", "ensure"
       system "go", "build", "-o", "cw"
       bin.install "cw"
 
