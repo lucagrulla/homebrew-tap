@@ -1,55 +1,16 @@
 class Cw < Formula
-  version = "1.3.4"
-
-  desc "CloudWatch Logs CLI"
-  homepage "https://github.com/lucagrulla/cw"
-  url "https://github.com/lucagrulla/cw.git",
-        :tag => version
-  head "https://github.com/lucagrulla/cw.git"
-
-  depends_on "go" => :build
-
-  bottle do
-    root_url "https://github.com/lucagrulla/homebrew-cw/releases/download/#{version}"
-    cellar :any_skip_relocation
-    # sha256 "dfa23ccff3149d0a12e061c1807f83756395ded8d36a542fd766899bc6351b33" => :sierra
-    sha256 "dfa23ccff3149d0a12e061c1807f83756395ded8d36a542fd766899bc6351b33" => :high_sierra
-  end
+  desc "The best way to tail AWS Cloudwatch Logs from your terminal"
+  homepage "https://www.lucagrulla.com/cw"
+  url "https://github.com/lucagrulla/cw/releases/download/1.4.0/cw_1.4.0_Darwin_x86_64.tar.gz"
+  version "1.4.0"
+  sha256 "37694ad357f6e89eb58360eedb305c4cb13d6cf71820350d53c06d4e53842923"
 
   def install
-    ENV["GOPATH"] = buildpath
-    arch = MacOS.prefer_64_bit? ? "amd64" : "x86"
-    dir = buildpath/"src/github.com/lucagrulla/cw"
-    dir.install buildpath.children - [buildpath/".brew_home"]
-
-    cd dir do
-      # Make binary
-      system "go", "build", "-o", "cw"
-      bin.install "cw"
-
-      # Install bash completion
-      output = Utils.popen_read("#{bin}/cw --completion-script-bash")
-      (bash_completion/"cw").write output
-
-      # Install zsh completion
-      output = Utils.popen_read("#{bin}/cw completion zsh")
-      (zsh_completion/"cw").write output
-    end
+    bin.install "cw"
   end
 
-  def caveats
-      <<-EOS
-
-      In order to get cw completion,
-        [bash] you need to install `bash-completion` with brew.
-        OR
-        [zsh], add the following line to your ~/.zshrc:
-          source #{HOMEBREW_PREFIX}/share/zsh/site-functions/cw
-      EOS
+  def caveats; <<~EOS
+    In order to get cw completion, [bash] you need to install `bash-completion` with brew. OR [zsh], add the following line to your ~/.zshrc: source #{HOMEBREW_PREFIX}/share/zsh/site-functions/cw
+  EOS
   end
-
-  # test do
-  #   run_output = shell_output("#{bin}/cw --help 2>&1")
-  #   assert_match "cw is a CLI tool to interact with your CloudWatch Logs", run_output
-  # end
 end
