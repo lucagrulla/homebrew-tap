@@ -3,16 +3,16 @@ class Cw < Formula
   homepage "https://www.lucagrulla.com/cw"
   url "https://github.com/lucagrulla/cw/releases/download/1.5.2/cw_1.5.2_Darwin_x86_64.tar.gz"
   version "1.5.2"
-  sha256 "7507766db567658ae3e84aae282f02bff227eb377a64ee15cc0e49c3c14cf94b"
+  sha256 "c02b1797d51ab18f8743d4da622ef583a054c742b3064c170b0c3cdc498b16b0"
 
   def install
     bin.install "cw"
     
     system bin/"cw --completion-script-bash > cw.bash"
-    system bin/"cw completion zsh > cw.zsh"
-    
     bash_completion.install "cw.bash"
-    zsh_completion.install "cw.zsh"
+    
+    # system bin/"cw completion zsh > cw.zsh"
+    # zsh_completion.install "cw.zsh"
   end
 
   def caveats; <<~EOS
