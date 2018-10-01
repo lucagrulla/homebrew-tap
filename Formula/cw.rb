@@ -1,9 +1,9 @@
 class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
-  url "https://github.com/lucagrulla/cw/releases/download/v1.7.0/cw_1.7.0_Darwin_x86_64.tar.gz"
-  version "1.7.0"
-  sha256 "ed591d5dc7aca0f622b50149b91d2349464f56dc9d75f34637857393d0064033"
+  url "https://github.com/lucagrulla/cw/releases/download/v1.7.1/cw_1.7.1_Darwin_x86_64.tar.gz"
+  version "1.7.1"
+  sha256 "502e21e893cec19e7443306734c3cd193582894cbd4b78f4dd87291343952b1c"
 
   def install
     bin.install "cw"
