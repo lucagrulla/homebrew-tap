@@ -3,7 +3,7 @@ class Cw < Formula
   homepage "https://www.lucagrulla.com/cw"
   url "https://github.com/lucagrulla/cw/releases/download/v3.0.1/cw_3.0.1_Darwin_x86_64.tar.gz"
   version "3.0.1"
-  sha256 "fac92b6a1290437b60b36a6d3e1ac3c7d32aa67c597bf6430d60ebb46a171dad"
+  sha256 "73f2c145f4dcbb820df9c85643d2bff9e4f68ba7f8def4d9b4328ce2cc97d940"
 
   def install
     bin.install "cw"
