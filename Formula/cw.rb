@@ -2,16 +2,16 @@
 class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
-  version "3.2.1"
+  version "3.2.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lucagrulla/cw/releases/download/v3.2.1/cw_3.2.1_Darwin_x86_64.tar.gz"
-    sha256 "ef0ce7be02cdb37952864791bd9fd44d64750cf7f9a85b568aae6aa4d9488487"
+    url "https://github.com/lucagrulla/cw/releases/download/v3.2.2/cw_3.2.2_Darwin_x86_64.tar.gz"
+    sha256 "dd112a58f80aee6d619e3f085d61456a450cd0eab6c1f751229d88e785110b7b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/lucagrulla/cw/releases/download/v3.2.1/cw_3.2.1_Linux_x86_64.tar.gz"
-      sha256 "c7e0192bc872f73a61fa70c258996c969be86bf85b2e192a5ac0e710f4ee8f8a"
+      url "https://github.com/lucagrulla/cw/releases/download/v3.2.2/cw_3.2.2_Linux_x86_64.tar.gz"
+      sha256 "c1a0da147b40f540c79b439ff56c293c83ec97e00288c5dbbc67a4f4c7c7ed08"
     end
   end
 
