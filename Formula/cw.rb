@@ -2,24 +2,24 @@
 class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
-  version "3.2.3"
+  version "3.2.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lucagrulla/cw/releases/download/v3.2.3/cw_3.2.3_Darwin_x86_64.tar.gz"
-    sha256 "8e7dc17463bb64c0809891d45650b2f0644f1ebe5b0fdbcf91d076b6bcb9079d"
+    url "https://github.com/lucagrulla/cw/releases/download/v3.2.4/cw_3.2.4_Darwin_x86_64.tar.gz"
+    sha256 "af865bd8275191ec86313d77071f80b647f11c1c865e0f75a19803590b30f027"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/lucagrulla/cw/releases/download/v3.2.3/cw_3.2.3_Linux_x86_64.tar.gz"
-      sha256 "d7f47cb21d4a626e97b8ef250b10eaee17e1c360fc8553296facbc747290c019"
+      url "https://github.com/lucagrulla/cw/releases/download/v3.2.4/cw_3.2.4_Linux_x86_64.tar.gz"
+      sha256 "81867834902ed95bce0387995ecc2fc28f6ff90e54027ee79791e3624e996fba"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lucagrulla/cw/releases/download/v3.2.3/cw_3.2.3_Linux_arm64.tar.gz"
-        sha256 "7b1263d72f2e08c2b44f48f0d7b40d3e74c564f582653faee857f56065b1abf6"
+        url "https://github.com/lucagrulla/cw/releases/download/v3.2.4/cw_3.2.4_Linux_arm64.tar.gz"
+        sha256 "b194cda3377835048364c9cbed9e9609292dec1a4bf0b3e2602cb86f721ff377"
       else
-        url "https://github.com/lucagrulla/cw/releases/download/v3.2.3/cw_3.2.3_Linux_armv6.tar.gz"
-        sha256 "3255c2f7ec16f401d3489ae6f45332a26483388d2bd45729df4d20edf3e63847"
+        url "https://github.com/lucagrulla/cw/releases/download/v3.2.4/cw_3.2.4_Linux_armv6.tar.gz"
+        sha256 "1be127f6add7cd55aeee12dc256aa3d03eb165d20596aded93ca6de6b7825d77"
       end
     end
   end
@@ -33,8 +33,8 @@ class Cw < Formula
     system bin/"cw --help-man > cw.1"
     man1.install "cw.1"
     
-    # system bin/"cw completion zsh > cw.zsh"
-    # zsh_completion.install "cw.zsh"
+    system bin/"cw --completion-script-zsh > cw.zsh"
+    zsh_completion.install "cw.zsh"
   end
 
   def caveats; <<~EOS
