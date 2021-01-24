@@ -30,9 +30,6 @@ class Cw < Formula
 
     bash_completion.install "cw.bash"
 
-    system bin/"cw --help-man > cw.1"
-    man1.install "cw.1"
-
     zsh_completion.install "cw.zsh"
   end
 
