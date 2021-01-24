@@ -5,24 +5,24 @@
 class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
-  version "4.0.0"
+  version "4.0.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.0/cw_4.0.0_Darwin_x86_64.tar.gz"
-    sha256 "5b7632c2a4de92294b5516102cc73224946481817da72ff83365b649f033eeaf"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.1/cw_4.0.1_Darwin_x86_64.tar.gz"
+    sha256 "b3705ff4dd0d43dfa11ec18746e98129967029cfe341d6737e774564ea759c3d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.0/cw_4.0.0_Linux_x86_64.tar.gz"
-    sha256 "90938b9fe68cacfee84678c2d1a5bd22a661ca1bfe5509a0258c428ae7d0dffe"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.1/cw_4.0.1_Linux_x86_64.tar.gz"
+    sha256 "fc0f5c42af2a428c17392825c0690dfe12aa4b76824ead75ca3f980afb57c590"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.0/cw_4.0.0_Linux_armv6.tar.gz"
-    sha256 "e3cbdb93aaf72d9db2f6dc58518c9163abd71eba1408c94537be69ff5b579346"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.1/cw_4.0.1_Linux_armv6.tar.gz"
+    sha256 "b1cd6f49efc52b074946723ac6c48463b0bdc719dbd6b9e5c45ffe5b338c9ac3"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.0/cw_4.0.0_Linux_arm64.tar.gz"
-    sha256 "9eff36065aef15a79d9a05f0dadc472681bcd441a9b52e979b5fa834b8258c14"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.1/cw_4.0.1_Linux_arm64.tar.gz"
+    sha256 "441d5131c367015ec5d66a44783c49ae3f1c7737d48b52c6704edec655dd7cfe"
   end
 
   def install
