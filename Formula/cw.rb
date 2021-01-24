@@ -27,10 +27,6 @@ class Cw < Formula
 
   def install
     bin.install "cw"
-
-    bash_completion.install "cw.bash"
-
-    zsh_completion.install "cw.zsh"
   end
 
   def caveats; <<~EOS
