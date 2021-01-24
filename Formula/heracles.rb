@@ -5,24 +5,24 @@
 class Heracles < Formula
   desc "Your favourite Fitbit-> Withings scale data importer"
   homepage "https://github.com/lucagrulla/heracles"
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lucagrulla/heracles/releases/download/v0.1.1/heracles_0.1.1_Darwin_x86_64.tar.gz"
-    sha256 "21f30dfb7d4cd7973ad7e8352075362286506e3f60eb25a90bea643018124c90"
+    url "https://github.com/lucagrulla/heracles/releases/download/v0.1.2/heracles_0.1.2_Darwin_x86_64.tar.gz"
+    sha256 "5809333e730f38cbe7afe155c2f0b1065d7e94c389cc6e35b0785e92610e3671"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/lucagrulla/heracles/releases/download/v0.1.1/heracles_0.1.1_Linux_x86_64.tar.gz"
-    sha256 "0898c6062023d461990eff27a72a83ff376c48bff9f1a0286c0532661ba9baeb"
+    url "https://github.com/lucagrulla/heracles/releases/download/v0.1.2/heracles_0.1.2_Linux_x86_64.tar.gz"
+    sha256 "8e6a06eba67c245a7cab796500553f013e4d1c53be9187d42ca44a87828b56e3"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/lucagrulla/heracles/releases/download/v0.1.1/heracles_0.1.1_Linux_armv6.tar.gz"
-    sha256 "5afe10644fe5da877679e115ab67f5248acb62244b3d94d401989e4f88a38cc5"
+    url "https://github.com/lucagrulla/heracles/releases/download/v0.1.2/heracles_0.1.2_Linux_armv6.tar.gz"
+    sha256 "8bc9833ebbec1b64347fd419cc6357c7258ee20fac61a7515f150aacb91d2435"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/lucagrulla/heracles/releases/download/v0.1.1/heracles_0.1.1_Linux_arm64.tar.gz"
-    sha256 "4191a7ba8230adf9474933f4a76e74dbfb0da6bf05a88aeb1ecf4a2889089fae"
+    url "https://github.com/lucagrulla/heracles/releases/download/v0.1.2/heracles_0.1.2_Linux_arm64.tar.gz"
+    sha256 "b65834e5e385740903e522a7c9021d4dd65f99add8327faa32b80b819c08677b"
   end
 
   def install
