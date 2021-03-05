@@ -5,24 +5,28 @@
 class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
-  version "4.0.4"
+  version "4.0.5"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.4/cw_4.0.4_Darwin_x86_64.tar.gz"
-    sha256 "0db4e47a4d1b041e7c0350f15161fbfa3418c192c9b12b48cd4ced8b8deab368"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.5/cw_4.0.5_Darwin_x86_64.tar.gz"
+    sha256 "89c432cc2319cc919a2124d6ed676c6611d5de5d39ab33d2ec3196005b30c433"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.5/cw_4.0.5_Darwin_arm64.tar.gz"
+    sha256 "29452349ea9075460c0dab5568bae0c8b45299279dd65d9c420f6076d995fd54"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.4/cw_4.0.4_Linux_x86_64.tar.gz"
-    sha256 "e5e6da211dd315052bcc8e69a4736e735e8ddb7e7dbdadcbe892b4e9c3af6072"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.5/cw_4.0.5_Linux_x86_64.tar.gz"
+    sha256 "fd8c2775e7fc113141010d655a5db85aa3aec01d3494ace66c5dcc2baa6480ce"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.4/cw_4.0.4_Linux_armv6.tar.gz"
-    sha256 "9cc364e308153df99d207bcc15085705ed6786fc335e9a3b5c6d77926660dc17"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.5/cw_4.0.5_Linux_armv6.tar.gz"
+    sha256 "b4450a68f908e874153ad5853e53bfb81a5a53e0a62a8eba8fa38d9eb6823385"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.4/cw_4.0.4_Linux_arm64.tar.gz"
-    sha256 "2d7276977881a91f9550271941b0523e2cd384c13b87cca1b21a275aa58f1b47"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.0.5/cw_4.0.5_Linux_arm64.tar.gz"
+    sha256 "6743606f25b2da51eeb61342f2f163ec896f3a69062c3ec56862252f15974db2"
   end
 
   def install
