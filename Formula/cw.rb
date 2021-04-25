@@ -5,28 +5,28 @@
 class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
-  version "4.0.6"
+  version "4.1.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.6/cw_4.0.6_Darwin_x86_64.tar.gz"
-    sha256 "3bef39feb0ad67ebdf6053c96f48a78bcfe4ad75fc1f5369fd5441c358563738"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.1.0/cw_4.1.0_Darwin_x86_64.tar.gz"
+    sha256 "f0281f51aad1d0a44b3c01d4ba464fde904c88e467b564b720ca553c6821fb40"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.6/cw_4.0.6_Darwin_arm64.tar.gz"
-    sha256 "36860bddc2e362db46d77c9042bf4819446218f666e649babd733062739ca913"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.1.0/cw_4.1.0_Darwin_arm64.tar.gz"
+    sha256 "baf8702ac2de1cebd08a594ba5d3fbe318828641002afd960a6830fe05ac64e7"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.6/cw_4.0.6_Linux_x86_64.tar.gz"
-    sha256 "1e21689e2da52c9f8f1905a59a51fde4310c0bdbd0109e14afe724c40971d5ee"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.1.0/cw_4.1.0_Linux_x86_64.tar.gz"
+    sha256 "21bb4eb3ef5b9017ee1d3a604a2cf019886aab4afea6445af5d7b7f2c5481014"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.6/cw_4.0.6_Linux_armv6.tar.gz"
-    sha256 "92d98697eb3abffe22eb0b414d3a6911b1dec684d992ddc010cf8b39d68a032a"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.1.0/cw_4.1.0_Linux_armv6.tar.gz"
+    sha256 "a9d177e95097d8a748e675facf4dea54cf51fed7374015afa49f6000fb8cf2cc"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/lucagrulla/cw/releases/download/v4.0.6/cw_4.0.6_Linux_arm64.tar.gz"
-    sha256 "7992952c3d88afc2c1135a7b75640a9a0975e7f862d9aee099587c08f49db820"
+    url "https://github.com/lucagrulla/cw/releases/download/v4.1.0/cw_4.1.0_Linux_arm64.tar.gz"
+    sha256 "93aa970e82f4812368418f9792d6be195fe15dae12f91aad2ae1fcd0dc18bfaa"
   end
 
   def install
