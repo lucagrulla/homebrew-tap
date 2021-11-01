@@ -6,7 +6,6 @@ class Heracles < Formula
   desc "Your favourite Fitbit-> Withings scale data importer"
   homepage "https://github.com/lucagrulla/heracles"
   version "0.1.2"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/lucagrulla/heracles/releases/download/v0.1.2/heracles_0.1.2_Darwin_x86_64.tar.gz"
