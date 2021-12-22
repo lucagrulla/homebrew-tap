@@ -6,7 +6,6 @@ class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
   version "4.1.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/lucagrulla/cw/releases/download/v4.1.0/cw_4.1.0_Darwin_x86_64.tar.gz"
