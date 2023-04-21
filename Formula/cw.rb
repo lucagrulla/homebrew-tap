@@ -5,12 +5,12 @@
 class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
-  version "4.1.2"
+  version "4.1.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Darwin_arm64.tar.gz"
-      sha256 "21cc5f863b2328d53376108945f9be3ae23568c6d412115499b20e49feb7bcfb"
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.3/cw_4.1.3_Darwin_arm64.tar.gz"
+      sha256 "9402c2de7e01a1691ae765ffea3bf51db47d74cd5bb8394947b8f67ef2b2fdbf"
 
       def install
         bin.install "cw"
@@ -20,8 +20,8 @@ class Cw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Darwin_x86_64.tar.gz"
-      sha256 "3d7d18bc00f11a8698328114e9b884fbd23390895708b40dfd6e82a4450acf4e"
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.3/cw_4.1.3_Darwin_x86_64.tar.gz"
+      sha256 "daaa0d383ba9527175dc5fbe5334eadf57055f42d800da58c3955fca1d9d7ccd"
 
       def install
         bin.install "cw"
@@ -33,9 +33,9 @@ class Cw < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Linux_armv6.tar.gz"
-      sha256 "dca4a5e902064ffbba40f2d3c8aa48df26748a12f37425b00ec359de4d1d6d12"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.3/cw_4.1.3_Linux_arm64.tar.gz"
+      sha256 "53035f8fd2a11dfe39d435de180b57a895fb2059d88ee3fbbf01527994d4bb58"
 
       def install
         bin.install "cw"
@@ -44,9 +44,9 @@ class Cw < Formula
         zsh_completion.install "cw.zsh"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Linux_arm64.tar.gz"
-      sha256 "f348d6020ec5c244122497070a0a86aa37d0badac4c0cd8f07e3a0bd307640d8"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.3/cw_4.1.3_Linux_armv6.tar.gz"
+      sha256 "b47f53688c7fb6208cee761cccae2b79caaf5147c2836a74bbc445823495a3c3"
 
       def install
         bin.install "cw"
@@ -56,8 +56,8 @@ class Cw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Linux_x86_64.tar.gz"
-      sha256 "6d823460f3b78fe82c1f1b949862af0a055ff2f91598ec28c4c7e067d627334d"
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.3/cw_4.1.3_Linux_x86_64.tar.gz"
+      sha256 "9a58a55b55cdead2a5cd16c3c85255ffce5d9d36d0719dba90be3b74204b57c1"
 
       def install
         bin.install "cw"
