@@ -5,12 +5,12 @@
 class Cw < Formula
   desc "The best way to tail AWS Cloudwatch Logs from your terminal"
   homepage "https://www.lucagrulla.com/cw"
-  version "4.1.1"
+  version "4.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.1/cw_4.1.1_Darwin_arm64.tar.gz"
-      sha256 "224ca9d956b70fa34781908244ca1dbafea99cbbd1f5ae9a5cf516d1f1b9d501"
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Darwin_arm64.tar.gz"
+      sha256 "21cc5f863b2328d53376108945f9be3ae23568c6d412115499b20e49feb7bcfb"
 
       def install
         bin.install "cw"
@@ -20,8 +20,8 @@ class Cw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.1/cw_4.1.1_Darwin_x86_64.tar.gz"
-      sha256 "c115656a121fc7b01272c5a347b1158211eff2843febf64ca5ab554ad3b7ffd5"
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Darwin_x86_64.tar.gz"
+      sha256 "3d7d18bc00f11a8698328114e9b884fbd23390895708b40dfd6e82a4450acf4e"
 
       def install
         bin.install "cw"
@@ -34,8 +34,8 @@ class Cw < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.1/cw_4.1.1_Linux_armv6.tar.gz"
-      sha256 "0612933c714aa91256b7a84af6add153925469f3efc05c1f874c40e15e260543"
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Linux_armv6.tar.gz"
+      sha256 "dca4a5e902064ffbba40f2d3c8aa48df26748a12f37425b00ec359de4d1d6d12"
 
       def install
         bin.install "cw"
@@ -45,8 +45,8 @@ class Cw < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.1/cw_4.1.1_Linux_arm64.tar.gz"
-      sha256 "ea1d731eb4fe98d106ddb0c33b0026ff78695c942014e0b886fa2cd00fbd57b3"
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Linux_arm64.tar.gz"
+      sha256 "f348d6020ec5c244122497070a0a86aa37d0badac4c0cd8f07e3a0bd307640d8"
 
       def install
         bin.install "cw"
@@ -56,8 +56,8 @@ class Cw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lucagrulla/cw/releases/download/v4.1.1/cw_4.1.1_Linux_x86_64.tar.gz"
-      sha256 "ffaee764e367c304e84bf5bdf178ee44e150e4e241d8e25600572424aa18d598"
+      url "https://github.com/lucagrulla/cw/releases/download/v4.1.2/cw_4.1.2_Linux_x86_64.tar.gz"
+      sha256 "6d823460f3b78fe82c1f1b949862af0a055ff2f91598ec28c4c7e067d627334d"
 
       def install
         bin.install "cw"
@@ -68,8 +68,9 @@ class Cw < Formula
     end
   end
 
-  def caveats; <<~EOS
-    In order to get cw completion, [bash] you need to install `bash-completion` with brew. OR [zsh], add the following line to your ~/.zshrc: source #{HOMEBREW_PREFIX}/share/zsh/site-functions/cw.zsh
-  EOS
+  def caveats
+    <<~EOS
+      In order to get cw completion, [bash] you need to install `bash-completion` with brew. OR [zsh], add the following line to your ~/.zshrc: source #{HOMEBREW_PREFIX}/share/zsh/site-functions/cw.zsh
+    EOS
   end
 end
